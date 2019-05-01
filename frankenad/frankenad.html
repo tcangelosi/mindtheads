@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <!-- navigation -->
+    <nav>
+      <ul class="navmain">
+        <li><a href="../index.html">Dictonary</a></li>
+        <li><a href="frankenad.html">Frankenad</a></li>
+        <li><a href="../mindfulness/mindfulness.html">Mindfulness</a></li>
+      </ul>
+    </nav>
+
+    <!-- items list -->
+    <div class="sideOne">
+      <ul class="list-reset">
+        <li>
+          <div class="item">
+            <img src="attractiveness.jpg"/>
+            <div class="caption">
+    Attractiveness - Research has shown that we not only consciously prefer attractive people but we associate their appearance with an inherent ‘goodness’ which then reflects directly on the product (also called the halo effect), but attractive faces instantly produce a positive feeling in the viewer. Attractive individuals produce similar physiological responses in viewers to those observed when people are presented with money.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <img src="doublemeaning.jpg"/>
+            <div class="caption">
+              Double Meanings - Words or phrases that can be read in two different ways. Shocking or taboo double meanings can be playfully hinted at. Also can be a source of lewd humour.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <img src="visualpuns.jpg"/>
+            <div class="caption">
+              Visual Puns - Brings metaphorical figures of speech to life. Quick gag but can also communicate the benefit without the need for an explanatory line. Creates clean simple ads that stand out from cluttered ads.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <img src="mashups.jpg"/>
+            <div class="caption">
+              Mash-ups - Brings together incompatible images, genres and styles. Creates something new. Combing mismatched images can create strong print advertising. Creates strong visuals and can either be silly or shocking.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <img src="footinthedoor.jpg"/>
+            <div class="caption">
+              Foot-in-the-Door - Multiple step influence strategy. First, ask people to comply with a seemingly small request. Then, a short while afterwards, you ask them a bigger request, which is inline with the smaller one. Starting with small request strongly increases the chances of complying with the bigger request compared to only asking the big request. All about changing people’s attitudes.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <img src="visualsimile.jpg"/>
+            <div class="caption">
+              Visual Simile - A visual simile, or visual echo, presents an object to look like something else. Can sometimes be created by clever photography or cropping. Often used for stand alone ads, but it's also possible to create a campaign out of them.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <img src="crusades.jpg"/>
+            <div class="caption">
+              Crusades - Aims to change the world on behalf of brands, in either a serious or a frivolous way used in either a serious or a frivolous way. Used in either a playful adoption of tone or a genuine attempt to address a social problem. Some campaigns use the language of crusades while  others genuinely attempt to address the issue.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <img src="curiosityarouser.jpg"/>
+            <div class="caption">
+              Curiosity Arouser - Some ads try and engage our curiosity so much that we cant resist reading body copy, going to a website or looking out for the next one in the series.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <img src="challenges.jpg"/>
+            <div class="caption">
+              Challenges - Setting a challenge can be a good way to engage readers and viewers. Writing a headline or endline in the form of a challenge or dare can help an ad cut through.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <img src="productfeatures.jpg"/>
+            <div class="caption">
+              Product Features - Focusing on a single feature of a product can demonstrate its over all quality. These ads might result from a planner or creative unearthing a fact that speaks volumes about a product’s overall quality.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <img src="playingwiththelogo.jpg"/>
+            <div class="caption">
+              Playing With the Logo - Basing an ad around a logo might not seem especially lateral, but it can create simple and clever ads.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <img src="brandmascot.jpg"/>
+            <div class="caption">
+              Brand Mascots - Have more subliminal power then we realize. Most popular advertising devices of all. A mascot can transcend its timeflot and become a global pop culture icon.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <img src="sex.jpg"/>
+            <div class="caption">
+              Sex - It’s by far the most used and obvious device employed to promote products. Draws attention but towards the sexual imagery itself causing low product recall. Sex seems to work mainly when the product advertised is directly related to an increase in perceived attractiveness or secuality.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <img src="advice.jpg"/>
+            <div class="caption">
+              Advice - Used for warmth and understanding. Can sometimes be offered on more lateral topics to help position a brand.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- make your poster side! -->
+    <div id="artboard" class="sideTwo">
+    </div>
+
+    <!-- Javascript goes down here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(".item").click(function() {
+        $(this)
+          .clone()
+          .appendTo("#artboard")
+          .addClass("drag");
+        console.log("copied?");
+
+        $(function() {
+          $(".drag").draggable();
+          $(".drop").droppable({
+            drop :function(){}
+          });
+        });
+
+      });
+    </script>
+  </body>
+</html>
